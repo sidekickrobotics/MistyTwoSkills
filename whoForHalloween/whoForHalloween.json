@@ -1,0 +1,19 @@
+{
+  "Name": "whoForHalloween",
+  "UniqueId": "ce743486-4e11-4371-9132-7c10b08e8c48",
+  "Description": "My skill is amazing!",
+  "StartupRules": [
+    "Manual",
+    "Robot"
+  ],
+  "Language": "javascript",
+  "BroadcastMode": "verbose",
+  "TimeoutInSeconds": 600,
+  "CleanupOnCancel": true,
+  "WriteToLog": false,
+  "Parameters": {
+    "int": 10,
+    "double": 20.5,
+    "string": "twenty"
+  }
+}
