@@ -1,4 +1,4 @@
-MistyII Displays Home Power Meter Info
+Misty II Displays Home Power Meter Info
 
 In this skill, Misty checks total house power consumption from a local network connected power meter, and if it is above a user determined threshold, will display RED led. If it is lower than lower threshold will display GREEN. If in between two thresholds, will display YELLOW. 
 
