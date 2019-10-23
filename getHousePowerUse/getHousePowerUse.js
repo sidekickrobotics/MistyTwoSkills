@@ -40,7 +40,7 @@ SOFTWARE.
 misty.Debug("The Home Power Use Skill is starting!")
 
 //pwrURL can be configured for either a local ip or API
-let pwrURL ="http://<your power meter ip address here>/current-sample "
+let pwrURL ="http://<your power meter ip address here>/current-sample"
 
 misty.SendExternalRequest("GET", pwrURL);
 
