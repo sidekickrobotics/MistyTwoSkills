@@ -1,0 +1,19 @@
+{
+  "Name": "getHousePowerUse",
+  "UniqueId": "8c04ceb5-b0d8-497b-a1e2-836abad5a7de",
+  "Description": "My skill is amazing!",
+  "StartupRules": [
+    "Manual",
+    "Robot"
+  ],
+  "Language": "javascript",
+  "BroadcastMode": "verbose",
+  "TimeoutInSeconds": 600,
+  "CleanupOnCancel": true,
+  "WriteToLog": false,
+  "Parameters": {
+    "int": 10,
+    "double": 20.5,
+    "string": "twenty"
+  }
+}
