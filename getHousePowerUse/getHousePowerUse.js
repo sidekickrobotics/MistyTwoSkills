@@ -114,7 +114,7 @@ misty.SetBlinking(true);
 
 // Testing and Showoff Purposes - confirm that correct levels and display
 
-let showOffSkill = false; //Set to "true" to see the skill
+let showOffSkill = true; //Set to "false" to turn off showing-off the skill
 
 if (showOffSkill){ 
     
