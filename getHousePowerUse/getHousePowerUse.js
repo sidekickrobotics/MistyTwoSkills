@@ -1,5 +1,5 @@
 /*
-MIT License
+Apache 2.0 License
 
 Copyright (c) 2019 sidekickrobotics
 
@@ -23,17 +23,18 @@ SOFTWARE.
 */
 
 
-// Descriiption: Misty Skill reads power consumption from a connected home power
+// Description: Misty Skill reads power consumption from a connected home power
 // meter and conveys relative usage information
 //  LED - red=hi, green=low, yellow=normal
-//  Face Display red, yellow, green lightning bolt
+//  Face Display  -red, yellow, green lightning bolt
 //  Left Arm acts as dial - meant to be a higher resolution (Not yet implemented)
 
 // Users should:
 //  -Change ip address
 //  -Change power level high and low thresholds in displayHousePower
 
-//To Run without connecting to a power monitor, the script can be run by commeting
+//To Run without connecting to a power monitor, the program can be run by setting
+//showOffSkill = true at the bottom of this file
 
 
 // Sends a message for debug 
@@ -63,7 +64,7 @@ function _SendExternalRequest(data) {
 
 function displayHousePower(housePower){
 
-    let powerThresholdHi = 2000; //Power in Watts 
+    let powerThresholdHi = 2000;  //Power in Watts 
     let powerThresholdLo = 1000;  //Power in Watts
     
     if (housePower > powerThresholdHi){
@@ -90,7 +91,7 @@ function displayHousePower(housePower){
 
         case "green":
             misty.Debug("Power consumption low: " + housePower + "W");
-            misty.ChangeLED(0, 250, 0); //Green LED to indicate low
+            misty.ChangeLED(0, 250, 0); //Green LED 
 
             misty.MoveArmDegrees("left", 80, 60, 0); // left arm point down to indicate low usage  
             misty.DisplayImage("e_GreenBolt.jpg");
@@ -112,7 +113,7 @@ function displayHousePower(housePower){
 misty.DisplayImage("e_DefaultContent.jpg");
 misty.SetBlinking(true);
 
-// Testing and Showoff Purposes - confirm that correct levels and display
+// Testing and Showoff Purposes - confirm correct levels and display
 
 let showOffSkill = true; //Set to "false" to turn off showing-off the skill
 
@@ -120,11 +121,11 @@ if (showOffSkill){
     
     misty.Debug("Showing-Off the House Power Monitor Skill");
     
-    misty.DisplayImage("e_DefaultContent.jpg"); //Start with default
+    misty.DisplayImage("e_DefaultContent.jpg"); //Start with default Misty
     misty.SetBlinking(true);
     
     misty.Pause(3000);  
-    displayHousePower(10); //Display if only using 10W - should be green
+    displayHousePower(10);   //Display if only using 10W - should be green
     misty.Pause(3000);
     displayHousePower(1500); //Display 1.5kW - should be yeller    
     misty.Pause(3000);
