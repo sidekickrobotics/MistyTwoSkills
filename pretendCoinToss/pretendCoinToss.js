@@ -206,7 +206,7 @@ if (showOffSkill){
 
     for (var i = 1; i <= 1; i=i+1){
         misty.Pause(5000);    
-        CoinToss1();
+        CoinToss();
         //CoinToss_Smooth();
         //TestMove();
         misty.Pause(100);    
