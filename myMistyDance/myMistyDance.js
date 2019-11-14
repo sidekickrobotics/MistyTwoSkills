@@ -7,7 +7,7 @@ This skill uses the magnetic prop arm. Not tested with Misty arms.
 Date First Written: 11/12/2019
 Date Last Tested: 11/14/2019
 
-This is experimental CODE, used for my learning.
+This is experimental CODE, used for my learning
 *********************************************************************************/
 
 /* Copyright 2019 Aaron Rues
@@ -61,15 +61,15 @@ function playDanceMove(danceMove){
             //Move Arms like getting into ready position
             //misty.MoveArm(string arm ("left", right, both), position, velocity, duration, [int prePauseMs], [int postPauseMs]);   
             misty.MoveArm("both", 45, 60, 0, 50, 500);         //Move arm to normal 45 degree hang position to start
-            misty.MoveArm("both", 15, 45, 0, 50, 50); //arms hanging down at side 45 degrees
+            misty.MoveArm("both", 15, 45, 0, 50, 50);          //arm move to indicate start step
             misty.MoveArm("both", 45, 60, 0, 50, 500);         //Move arm to normal 45 degree hang position to start
 
             for (var i = 1; i <= 3; i=i+1){
             
                 waltzDrive("reverse");
-                misty.MoveArm("both", 15, 45, 0, 50, 500); //every time Misty goes REVESE, move arms a bit
+                misty.MoveArm("both", 15, 45, 0, 50, 500); //move arms a bit
                 misty.Pause(300);
-                misty.MoveArm("both", 25, 45, 0, 50, 500); //every time Misty goes REVESE, move arms a bit
+                misty.MoveArm("both", 25, 45, 0, 50, 500); //move arms a bit
                 waltzDrive("forward");
                 misty.Pause(300);
             
@@ -91,23 +91,22 @@ function playDanceMove(danceMove){
 
             //move head slowly back and forth pattern and arms waving
             for (var i = 1; i <= 3; i=i+1){
-
-                //misty.MoveHeadDegrees(pitch, roll, yaw, velocity, [int prePauseMs], [int postPauseMs]);
+                
                 misty.MoveHead(10, 35, -10, 60, 50, 50); //Move head - groovy position 1               
-                misty.MoveArm("right", 15, 60, 0, 50, 50); //Move arm to normal 45 degree hang position
-                misty.MoveArm("left", 25, 60, 0, 50, 50); //Move arms to 25 degree hang position
+                misty.MoveArm("right", 15, 60, 0, 50, 50); 
+                misty.MoveArm("left", 25, 60, 0, 50, 50); 
                 misty.DriveTime(5,5,1000); //Drive forward a little
                 misty.Pause(groovyPause);
 
                 misty.MoveHead(14, -27, -10, 50, 50, 50); //Move head - groovy position 2
-                misty.MoveArm("right", 45, 30, 0, 50, 50); //Move left arm 
-                misty.MoveArm("left", 35, 30, 0, 50, 50); //Move right arm
+                misty.MoveArm("right", 45, 30, 0, 50, 50);  
+                misty.MoveArm("left", 35, 30, 0, 50, 50); 
                 misty.DriveTime(-5,-5,1000);
                 misty.Pause(groovyPause);
                 
                 misty.MoveHead(-13, -32, -2, 50, 50, 50); //Move head - groovy position 3
-                misty.MoveArm("right", 35, 30, 0, 50, 50); //Move left arm 
-                misty.MoveArm("left", 15, 30, 0, 50, 50); //Move right arm
+                misty.MoveArm("right", 35, 30, 0, 50, 50); 
+                misty.MoveArm("left", 15, 30, 0, 50, 50); 
                 misty.DriveTime(10,10,1000);
                 misty.Pause(groovyPause);
                 
@@ -146,11 +145,11 @@ function playDanceMove(danceMove){
             for (var i = 1; i <= 20; i=i+1){       
                 
                 misty.MoveHead(-20, 0, 0, 80, 10, 10); //Move head up
-                misty.MoveArm("both", 0, 40, 0, 50, 50); //Move left arm 
+                misty.MoveArm("both", 0, 40, 0, 50, 50); 
                 misty.Pause(headbangPause);
                 
                 misty.MoveHead(20, 0, 0, 80, 10, 10);  //Move head down
-                misty.MoveArm("both", 45, 40, 0, 50, 50); //Move left arm
+                misty.MoveArm("both", 45, 40, 0, 50, 50); 
                 misty.Pause(headbangPause);
         
             } //End For
