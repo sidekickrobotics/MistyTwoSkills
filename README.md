@@ -11,13 +11,19 @@ https://www.apache.org/licenses/LICENSE-2.0
 
 Note: These Misty Skills are ALL experimental and in development. My Misty II is _<3 months old_
 
-**obstacleDrive** - Misty detects and drives around an obstacle
+**driveObstacle** - Misty detects and drives around an obstacle
 
-**nodYesNo** - Misty performs external request then nods based on returned value
+**getHousePowerUse** - Misty connects to power meter and displays present power usage level
 
 **getWeather** - updated External Request to use weatherstack instead of APIXU
 
-**whoForHalloween** - Misty suggests different costumes
+**myMistyDance** - Holding program for different dance moves
+
+**nodYesNo** - Misty performs external request then nods based on returned value
 
 **pretendCoinToss** - Misty acts out a coin toss and says heads or tails
+
+**whoForHalloween** - Misty suggests different costumes
+
+
 
