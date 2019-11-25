@@ -11,11 +11,13 @@ https://www.apache.org/licenses/LICENSE-2.0
 
 Note: These Misty Skills are ALL experimental and in development. My Misty II is _<3 months old_
 
-nodYesNo - Misty performs external request then nods based on returned value
+**obstacleDrive** - Misty detects and drives around an obstacle
 
-getWeather - updated External Request to use weatherstack instead of APIXU
+**nodYesNo** - Misty performs external request then nods based on returned value
 
-whoForHalloween - Misty suggests different costumes
+**getWeather** - updated External Request to use weatherstack instead of APIXU
 
-pretendCoinToss - Misty acts out a coin toss and says heads or tails
+**whoForHalloween** - Misty suggests different costumes
+
+**pretendCoinToss** - Misty acts out a coin toss and says heads or tails
 
