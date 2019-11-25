@@ -1,6 +1,30 @@
 /**********************************************************************
 Misty requests from yesno API and then nods yes or no
-**********************************************************************/
+
+Testing External Requests on Misty II  
+
+Date First Written: 11/4/2019
+Date Last Update: 11/24/2019
+Date Last Tested: 11/24/2019
+
+This is experimental CODE, used for my learning.
+*********************************************************************************/
+
+/* Copyright 2019 Aaron Rues
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License. */
+
+
 misty.Debug("The nod Yes or No skill is starting! - External Request Tutorial")
 
 let yesnoURL =  "https://yesno.wtf/api"
@@ -38,9 +62,13 @@ function nodHeadYes() {
     //move head up and down 3 times
     for (var i = 1; i <= 3; i=i+1){       
         
-        misty.MoveHead(-10, 0, 0, 50, 50, 50); //Move head up
         misty.Pause(500);
-        misty.MoveHead(10, 0, 0, 50, 10, 10);  //Move head down
+
+        //Syntax: misty.MoveHead(double pitch, double roll, double yaw, double velocity, [int prePauseMs], [int postPauseMs]);
+        //Syntax Update 12/17: misty.MoveHead(double pitch, double roll, double yaw, double velocity, [double Duration], [int prePauseMs], [int postPauseMs]);
+        misty.MoveHead(-10, 0, 0, 50); //Move head up
+        misty.Pause(500);
+        misty.MoveHead(10, 0, 0, 50);  //Move head down
         misty.Pause(500);
 
     } //End For
@@ -59,10 +87,14 @@ function nodHeadYes_noPause() {
     //move head up and down 3 times
     for (var i = 1; i <= 3; i=i+1){
        
-        //misty.MoveHead(double pitch, double roll, double yaw, double velocity, [int prePauseMs], [int postPauseMs]);
-        misty.MoveHead(-10, 0, 0, 50, 50, 50); //Move head up
+        misty.Pause(500);
+
+        //Syntax: misty.MoveHead(double pitch, double roll, double yaw, double velocity, [int prePauseMs], [int postPauseMs]);
+        //Syntax Update 12/17: misty.MoveHead(double pitch, double roll, double yaw, double velocity, [double Duration], [int prePauseMs], [int postPauseMs]);
+
+        misty.MoveHead(-10, 0, 0, 50); //Move head up
         //misty.Pause(500);
-        misty.MoveHead(10, 0, 0, 50, 510, 510);  //Move head down
+        misty.MoveHead(10, 0, 0, 50);  //Move head down
         //misty.Pause(500);
 
     } //End For
@@ -81,9 +113,9 @@ function nodHeadYes2() {
     for (var i = 1; i <= 3; i=i+1){
         //move head up and down 3 times
 
-        misty.MoveHead(-20, -2, 0, 90, 50, 50);  //Move head up
+        misty.MoveHead(-20, -2, 0, 90);  //Move head up
         misty.Pause(500);
-        misty.MoveHead(15, 2, 0, 90, 10, 10);    //Move head down
+        misty.MoveHead(15, 2, 0, 90);    //Move head down
         misty.Pause(500);
 
     } //End For
@@ -101,9 +133,9 @@ function nodHeadNo() {
 
     for (var i = 1; i <= 3; i=i+1){
         //move head side to side 3 times
-        misty.MoveHead(0, 0, -20, 90, 50, 50);  //Move head right
+        misty.MoveHead(0, 0, -20, 90);  //Move head right
         misty.Pause(500);
-        misty.MoveHead(0, 0, 20, 90, 10, 10); //move head left
+        misty.MoveHead(0, 0, 20, 90); //move head left
         misty.Pause(500);
 
     }
@@ -121,9 +153,9 @@ function nodHeadNo2() {
 
     for (var i = 1; i <= 3; i=i+1){
         //move head side to side 3 times
-        misty.MoveHead(0, 0, -50, 90, 50, 50);  //Move head right
+        misty.MoveHead(0, 0, -50, 90);  //Move head right
         misty.Pause(500);
-        misty.MoveHead(0, 0, 50, 90, 10, 10); //move head left
+        misty.MoveHead(0, 0, 50, 90); //move head left
         misty.Pause(500);
 
     }
