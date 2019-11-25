@@ -102,7 +102,7 @@ function _LeftTOFNEAR(data){
   
 
 
-//NOTICE: This idea is from Phillip Vinhha in his Dance Move entry 
+//NOTICE: This idea is from Phillip Vinh Ha in his Dance Move entry 
 //Each of the following functions defines a small Misty move, 
 
 function DriveForward()
