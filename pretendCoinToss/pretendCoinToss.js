@@ -87,13 +87,13 @@ function CoinToss() {
     //Source http://freesoundstock.blogspot.com/2018/08/coin-toss-sound-effect.html
     
     misty.Pause(100);
-    misty.MoveHead(-25, 5, -10, 60); //move head like looking up 
+    misty.MoveHead(-25, 5, -10, 70); //move head like looking up 
     misty.Pause(1500);
 
     //misty.MoveArmDegrees("right", 10, 60, 100, 500); //Move arm down like catching it
     misty.MoveArm("right", 10, 95, 0, 50, 1000);  //Move arm down like catching it
     misty.Pause(2000);        
-    misty.MoveHead(20, 6, -42, 60);  //Move head right to look at hand
+    misty.MoveHead(20, 6, -42, 70);  //Move head right to look at hand
     misty.Pause(4000);   
     //misty.MoveArmDegrees("right", -5, 60, 100, 500); //Move arm up straight - like Misty is showing you the coin
     misty.MoveArm("right", -15, 90, 0, 100, 100);  //Move arm up straight - like Misty is showing you the coin
