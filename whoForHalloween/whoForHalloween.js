@@ -1,7 +1,7 @@
 /**********************************************************************
-My "Who for Halloween?" Misty skill"
+My "Who for Halloween?" Misty skill
 
-\Misty II plays different characters for Halloween
+Misty II plays different characters for Halloween
 
 Date First Written: 10/17/2019
 Date Last Update: 11/26/2019
@@ -31,7 +31,7 @@ misty.Debug("The Who for Halloween? Skill is starting!")
 
 //TODO: Implement a random selection function here, either triggered off of a voice request or a button press
 
-//For Right now - force a sequence of possible halloween costumes
+//For right now - force a sequence of possible halloween costumes
 playCharacter("DefaultMisty");
 
 misty.Pause(3000); //Wait 3 seconds
@@ -138,7 +138,7 @@ function playCharacter(characterName){
             misty.MoveArms(10, -18, 50, 50); //left arm slightly up and right slightly down, move slowly            
             misty.MoveHead(-20, -5, 0, 90);  //Move head back and forth
             misty.Pause(200);
-            
+
             //Need to find a good zombie sound
             misty.PlayAudio("s_Fear.wav");
 
