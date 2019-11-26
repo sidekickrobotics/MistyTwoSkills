@@ -87,13 +87,13 @@ function CoinToss() {
     //Source http://freesoundstock.blogspot.com/2018/08/coin-toss-sound-effect.html
     
     misty.Pause(100);
-    misty.MoveHead(-25, 5, -10, 40); //move head like looking up 
+    misty.MoveHead(-25, 5, -10, 60); //move head like looking up 
     misty.Pause(1500);
 
     //misty.MoveArmDegrees("right", 10, 60, 100, 500); //Move arm down like catching it
     misty.MoveArm("right", 10, 95, 0, 50, 1000);  //Move arm down like catching it
     misty.Pause(2000);        
-    misty.MoveHead(20, 6, -42, 40);  //Move head right to look at hand
+    misty.MoveHead(20, 6, -42, 60);  //Move head right to look at hand
     misty.Pause(4000);   
     //misty.MoveArmDegrees("right", -5, 60, 100, 500); //Move arm up straight - like Misty is showing you the coin
     misty.MoveArm("right", -15, 90, 0, 100, 100);  //Move arm up straight - like Misty is showing you the coin
@@ -131,55 +131,6 @@ function TestMove() {
     misty.Pause(500); // Pause  3 seconds
     
 } //End TestMove
-
-
-// Testing out smoother operation 
-function CoinToss_Smooth() {
-    
-    misty.ChangeLED(255, 128, 80); //Change LED to Golden Color
-
-    let myPrePause = 500;    //Prepause for time - tested in range of 50 to 1000 (1sec) - 500 seemed to be best for these steps
-    let myPostPause = 500;   //Post Pause for a time - tested in range of 50 to 1000 (1sec) - 500 seemed to be best for these steps
-    let myDefaultSpeed = 60; //Default speed, note >90 is to fast 
-
-    let numTosses = 1;      //Number of tosses - make this 1 unles you want to do best of 3, 5, etc
-
-    misty.MoveHead(0, 0, 0, 90); //Move Head to zero position
-    misty.Pause(3000);      // Pause 3 seconds, to let head get there
-
- 
-    for (var i = 1; i <= numTosses; i=i+1){
-        
-        //misty.MoveHead(double pitch, double roll, double yaw, double velocity, [int prePauseMs], [int postPauseMs]);
-        //misty.MoveHead(pitch down(26) to up(-40), roll right(40) to left(-40), yaw right(-81) to left(81), velocity (0-100), [int prePauseMs], [int postPauseMs]);
-        misty.MoveHead(0, 0, 0, 90,myPrePause, myPostPause); //Head should already be here, but move head to zero position
-
-        //Start by looking down at a coin in the right hand - move from zero to lookRightHand pose
-        misty.MoveHead(0, 0, 0, myDefaultSpeed, myPrePause, myPostPause); //Head should already be here, but move head to zero position
-        misty.MoveHead(1, 1, -4, myDefaultSpeed, myPrePause, myPostPause); 
-        misty.MoveHead(3, 1, -8, myDefaultSpeed, myPrePause, myPostPause); 
-        misty.MoveHead(6, 1, -12, myDefaultSpeed, myPrePause, myPostPause); 
-        misty.MoveHead(10, 2, -15, myDefaultSpeed, myPrePause, myPostPause); 
-        misty.MoveHead(14, 2, -15, myDefaultSpeed, myPrePause, myPostPause); 
-        misty.MoveHead(17, 3, -25, myDefaultSpeed, myPrePause, myPostPause); 
-        misty.MoveHead(19, 3, -30, myDefaultSpeed, myPrePause, myPostPause); 
-        misty.MoveHead(21, 4, -35, myDefaultSpeed, myPrePause, myPostPause); 
-        misty.MoveHead(22, 5, -38, myDefaultSpeed, myPrePause, myPostPause); 
-
-        misty.MoveHead(23, 6, -40, myDefaultSpeed, myPrePause, myPostPause); //This is the FINAL looking at Coin in Right Hand position       
-
-        //Note: The above is very choppy
-        
-        misty.Pause(5000);
-       // misty.MoveHead(-25, 5, -10, 60, 10, 10); //move head up position
-        misty.Pause(5000);
-
-    }
-
-    misty.MoveHead(0, 0, 0, 90); //Head at zero position
-    misty.Pause(500); // Pause  3 seconds
-    
-} //End Coin Toss Smoother
 
 
 let showOffSkill = false; //Set to "true" to see the skill
