@@ -56,19 +56,15 @@ function _SendExternalRequest(data) {
 
 
 
-// Toss a Coin and look at result and then say the result 
+// Toss a Coin and look at result in right hand
 function CoinToss() {
     
     misty.ChangeLED(80, 80, 80); //Change LED to Yellow
 
-    //misty.MoveHead(double pitch, double roll, double yaw, double velocity, [int prePauseMs], [int postPauseMs]);
-    //misty.MoveArm(arm(string), position, velocity, duration, prePause, PostPause)
-
     //Set Misty to an initial position for consistent starting        
     misty.MoveHead(0, 0, 0, 90);    // Move Head to zero position
-    misty.Pause(1000);              // Pause ? seconds
+    misty.Pause(1000);              // Pause to allow move to finish
 
-    //Use misty.MoveArm to move only one arm or both at the same time 
     //misty.MoveArm(string arm (left, right, both), position, velocity, duration, [int prePauseMs], [int postPauseMs]);
     misty.MoveArm("both", 0, 60, 0, 50, 1000);  //Move arm straight - making both arms move to ensure movement
     misty.MoveArm("both", 45, 60, 0, 50, 1000);  //Move arm to normal 45 degree hang position
@@ -77,46 +73,35 @@ function CoinToss() {
     //was happening with the commands, so put a little arm jig at the beginning to let me know
     //when the skill had started by looking at Misty and not console. 
 
-    //Note: Move Arm range is 90 (fully down) to -29 (fully up). 0 Points the arms straight forward.
-
-    //Use misty.MoveArms when you want to move arms at the same time, but the arms are to move at different speeds and positions 
-    //misty.MoveArms(leftArmPosition , rightArmPosition, leftArmVelocity, rightArmVelocity. duration, [int prePauseMs], [int postPauseMs]);
+    //Note: Move Arm range is 90 (fully down) to -29 (fully up). 0 Points the arms straight forward
 
     misty.Pause(2000);
-    misty.MoveHead(22, 6, -45, 60, 50, 500);  //Move head right to look at hand
-    misty.Pause(1000);
+    misty.MoveHead(22, 6, -45, 60);  //Move head right to look at hand
+    misty.Pause(1500);
 
-    //misty.MoveArmDegrees(string arm, double degrees, double velocity, [int prePauseMs], [int postPauseMs])
-    //misty.MoveArmDegrees("right", -15, 90, 50, 1000); // up like throwing
     //misty.MoveArm(string arm (left, right, both), position, velocity, duration, [int prePauseMs], [int postPauseMs]);       
     misty.MoveArm("right", -15, 90, 0, 1000, 100); // up like throwing
         
+    //play the coin toss sound here
     misty.PlayAudio('s_CoinToss.wav', 90); //Try to play the coin toss at the exact time the arm moves up
     //Source http://freesoundstock.blogspot.com/2018/08/coin-toss-sound-effect.html
-    //play the coin toss sound here
+    
     misty.Pause(100);
-    misty.MoveHead(-25, 5, -10, 40, 50, 500); //move head like looking up 
-    misty.Pause(1000);
+    misty.MoveHead(-25, 5, -10, 40); //move head like looking up 
+    misty.Pause(1500);
 
     //misty.MoveArmDegrees("right", 10, 60, 100, 500); //Move arm down like catching it
     misty.MoveArm("right", 10, 95, 0, 50, 1000);  //Move arm down like catching it
     misty.Pause(2000);        
-    misty.MoveHead(20, 6, -42, 40, 50, 1000);  //Move head right to look at hand
-    misty.Pause(3000);   
+    misty.MoveHead(20, 6, -42, 40);  //Move head right to look at hand
+    misty.Pause(4000);   
     //misty.MoveArmDegrees("right", -5, 60, 100, 500); //Move arm up straight - like Misty is showing you the coin
     misty.MoveArm("right", -15, 90, 0, 100, 100);  //Move arm up straight - like Misty is showing you the coin
     misty.Pause(2000);   
 
-
-    //misty.MoveHead(-25, 5, -10, 40, 10, 10); //move head left
-    //misty.Pause(5000);
     misty.MoveHead(-15, 0, 0, 90); //Head at zero position
-    //After teh coin has come back down, Misty looks at right hand and says
     
-    misty.Pause(500); // Pause  3 seconds
-
-    //misty.MoveArmDegrees("right", 120, 30, 0, 1500); // down
-
+    misty.Pause(500); // Pause 
     
 } //End Coin Toss  
 
@@ -135,9 +120,9 @@ function TestMove() {
     //misty.MoveHead(double pitch, double roll, double yaw, double velocity, [int prePauseMs], [int postPauseMs]);
     for (var i = 1; i <= 2; i=i+1){
         //move head side to side 3 times
-        misty.MoveHead(smallestMove, smallestMove, smallestMove, moveSpeed, 50, 50);  //Move head positive direction
+        misty.MoveHead(smallestMove, smallestMove, smallestMove, moveSpeed);  //Move head positive direction
         misty.Pause(3000);
-        misty.MoveHead(-smallestMove, -smallestMove, -smallestMove, moveSpeed, 50, 50); //move head negative direction
+        misty.MoveHead(-smallestMove, -smallestMove, -smallestMove, moveSpeed); //move head negative direction
         misty.Pause(3000);
 
     }
