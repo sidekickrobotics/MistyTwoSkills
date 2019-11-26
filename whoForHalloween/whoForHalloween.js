@@ -65,7 +65,8 @@ function playCharacter(characterName){
             misty.MoveArms(45, 45, 90, 90); //arms hanging down at side 45 degrees
             
             //misty.MoveHeadDegrees(pitch, roll, yaw, velocity, [int prePauseMs], [int postPauseMs]);
-            misty.MoveHead(-10, 0, 0, 90, 50, 50);  //Move head looking straight forward and slightly up
+            misty.MoveHead(-10, 0, 0, 90);  //Move head looking straight forward and slightly up
+            misty.Pause(200);
             misty.DisplayImage("e_DefaultContent.jpg"); //Default Misty eyes
 
             break //End DefaultMisty
@@ -105,7 +106,8 @@ function playCharacter(characterName){
 
             //MoveArms(left position, right position, left speed, right speed)
             misty.MoveArms(-25,-25, 80, 80); //move arms up like they are over head
-            misty.MoveHead(-25, -2, 0, 90, 50, 50);  //Move head up
+            misty.MoveHead(-25, -2, 0, 90);  //Move head up
+            misty.Pause(200);
 
             //https://www.thesoundarchive.com/play-wav-files.asp?sound=starwars/chewy_roar.wav
             misty.PlayAudio("chewy_roar.wav", 99); //play at high volume
@@ -126,14 +128,17 @@ function playCharacter(characterName){
 
             //MoveArms(left position, right position, left speed, right speed)
             misty.MoveArms(0, 0, 70, 70); //start with both arms straight out            
-            misty.MoveHead(-20, -5, 0, 90, 50, 50);  //Move head back and forth
-            
+            misty.MoveHead(-20, -5, 0, 90);  //Move head back and forth
+            misty.Pause(200);
+
             misty.MoveArms(-15, 18, 50, 50); //right arm slightly up and left slightly down, move slowly            
-            misty.MoveHead(-20, 2, 0, 90, 50, 50);  //Move head back and forth
-            
+            misty.MoveHead(-20, 2, 0, 90);  //Move head back and forth
+            misty.Pause(200);
+
             misty.MoveArms(10, -18, 50, 50); //left arm slightly up and right slightly down, move slowly            
-            misty.MoveHead(-20, -5, 0, 90, 50, 50);  //Move head back and forth
- 
+            misty.MoveHead(-20, -5, 0, 90);  //Move head back and forth
+            misty.Pause(200);
+            
             //Need to find a good zombie sound
             misty.PlayAudio("s_Fear.wav");
 
