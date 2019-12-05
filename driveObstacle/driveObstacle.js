@@ -5,7 +5,7 @@ My Misty Obstacle submission
 Testing on Misty II obstacle detection - Football moves 
 
 Date First Written: 10/21/2019
-Date Last Update: 11/24/2019
+Date Last Update: 12/05/2019 - Added TakeDepthPicture function
 Date Last Tested: 11/24/2019
 
 This is experimental CODE, used for my learning.
@@ -34,6 +34,9 @@ DriveForwardShort(); //Forward about a foot
 misty.Pause(1000);
 DriveBackwardShort(); //backwards about a foot
 misty.Pause(1000);
+
+//Uncomment this to get Misty to take a Depth Picture
+misty.TakeDepthPicture();
 
 //misty.DriveTime(double linearVelocity, double angularVelocity, int timeMs, [double degree], [int prePauseMs], [int postPauseMs]);
 misty.DriveTime(20, 0, 12000); // Misty to Drive to Score a Touchdown - Long move for 12 seconds 
@@ -100,6 +103,67 @@ function _LeftTOFNEAR(data){
     misty.ChangeLED(255, 255, 255); //Change LED to White at the end
  }
   
+
+
+//Take Depth Picture function is not used yet for obstacle avoidance, just trying to get good information from it. This function uses the
+//Occipital sensor and Takes a picture, then filters the result into ONE average value. 
+
+function _TakeDepthPicture(data)
+{
+    //misty.Debug(JSON.stringify(data));
+    
+    var myWidth = data.Result.Width; //What does this need to be?
+    var myHeight = data.Result.Height; //What does this need to be?
+    
+    var myStatus = data.Status;
+    var myDepthImage = data.Result.Image;
+    
+    misty.Debug('The width, height are '+ myWidth +", "+ myHeight);
+    misty.Debug('The status is '+ myStatus);
+    misty.Debug('The first Image value is '+ myDepthImage[1] + " and the Image Array length is " + myDepthImage.length);
+    
+    //If there is data in the Image
+    if (myDepthImage.length > 0){
+        
+        var nCounter; //a counter
+        var testDepth; //a Depth variable for populating
+        var depthCount = 0;
+        var depthSum = 0.01;
+
+        //testDepth = myDepthImage[15];  //Pick a random element to make sure it is working
+        //misty.Debug("This is the selected array element depth: " + testDepth );
+
+        //Find one values
+        for (nCounter = 1; nCounter < myDepthImage.length; nCounter+=1){
+
+             //misty.Debug(nCounter + " Means the counter is working!");
+            
+            if (myDepthImage[nCounter] !== "NaN"){
+
+                testDepth = myDepthImage[nCounter]; 
+                depthCount = depthCount + 1; //Add one to the count
+                depthSum = depthSum + testDepth; //add the measured depth to the sum
+                aveDepth = depthSum/depthCount;  //Get the average of all the measured
+
+                //TODO: In the future, get the min and max
+            
+                
+            }//End If Depth is NaN
+      
+        }//End For counter to loop through all 76800 values
+
+        misty.Debug("With a count " + depthCount + " the average depth is " + aveDepth);
+    
+    }//End If depthImage length check
+
+
+    //To Investigate: 
+    //Get the average? This is way off - brief investigation
+    //Get one in each quadrant? 
+    //get one in the center?
+
+}//Endtake depth
+
 
 
 //NOTICE: This idea is from Phillip Vinh Ha in his Dance Move entry 
