@@ -21,6 +21,8 @@ Note: These Misty Skills are ALL experimental and in development. My Misty II is
 
 **nodYesNo** - Misty performs external request then nods based on returned value
 
+**paceBackAndForth** - Misty paces back and forth
+
 **pretendCoinToss** - Misty acts out a coin toss and says heads or tails
 
 **whoForHalloween** - Misty suggests different costumes
