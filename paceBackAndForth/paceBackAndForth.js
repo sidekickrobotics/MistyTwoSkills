@@ -38,7 +38,7 @@ limitations under the License. */
 let paceDistance = 0.8; //meters - distance to pace
 let paceTime = 8000;    //milliseconds - time to pace
 
-let paceCount = 15; //set a number of times to pace. Min is 1.
+let paceCount = 5; //set a number of times to pace. Min is 1.
 
 
 // Return data when a bump sensor is pressed
