@@ -14,8 +14,8 @@ Note: See notes in the squareDrive() example for more helpful notes. squareDrive
 found at MistyCommunity/SampleCode/Javascript SDK Code Samples/ in Github
 
 Date First Written: 11/8/2019
-Date Last Update: 12/13/2019
-Date Last Tested: 12/13/2019
+Date Last Update: 12/18/2019 - reduce paceCount to 5
+Date Last Tested: 12/18/2019
 
 This is experimental CODE, used for my learning.
 **********************************************************************/
