@@ -86,14 +86,7 @@ function _TakeDepthPicture(data)
                 //misty.Debug("This is the check on arvar: " + arvar);
 
                 columnDepthSum[arvar] = columnDepthSum[arvar] + myDepthImage[nCounter];
-                columnDepthCnt[arvar] = columnDepthCnt[arvar] + 1;
-
-                //TODO: If it is <80*320 then top, if >160*80 then bottom, else mid
-
-                //Top leftmost 0 to 80 and 0 to 80 rows    
-
-                //TODO: In the future, get the min and max
-            
+                columnDepthCnt[arvar] = columnDepthCnt[arvar] + 1;            
                 
             }//End If Depth is NaN
       
