@@ -132,7 +132,7 @@ function _TakeDepthPicture(data)
 //TakeDepthPicture array and calculate averages over 3 rows of 4 squares = 12 total. 
 //Each block is the average of 80x80 = 6400 measurements
 
-// The 12 points cover teh field of view like this:
+// The 12 points cover the field of view like this:
 // TOP:    TopFarLeft - TopNearLeft - TopNearRight - TopFarRight
 // MIDDLE: MidFarLeft - MidNearLeft - MidNearRight - MidFarRight
 // BOTTOM: BtmFarLeft - BtmNearLeft - BtmNearRight - BtmFarRight
