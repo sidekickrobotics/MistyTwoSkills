@@ -9,7 +9,7 @@ https://www.apache.org/licenses/LICENSE-2.0
 
 # This is Collection of Misty II Robot skills
 
-Note: These Misty Skills are ALL experimental and in development. My Misty II is _<3 months old_
+Note: These Misty Skills are ALL experimental and in development. My Misty II is _<4 months old_
 
 **driveObstacle** - Misty detects and drives around an obstacle
 
@@ -24,6 +24,8 @@ Note: These Misty Skills are ALL experimental and in development. My Misty II is
 **paceBackAndForth** - Misty paces back and forth
 
 **pretendCoinToss** - Misty acts out a coin toss and says heads or tails
+
+**takeDepth** - Using the Occipital Sensor to obtain different depth values
 
 **whoForHalloween** - Misty suggests different costumes
 
