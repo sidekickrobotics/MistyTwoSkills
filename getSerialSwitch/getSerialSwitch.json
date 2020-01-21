@@ -1,0 +1,19 @@
+{
+  "Name": "getSerialSwitch",
+  "UniqueId": "5e7bed0b-34b0-4ad7-bb34-2a862a7e21ae",
+  "Description": "My skill is amazing!",
+  "StartupRules": [
+    "Manual",
+    "Robot"
+  ],
+  "Language": "javascript",
+  "BroadcastMode": "verbose",
+  "TimeoutInSeconds": 600,
+  "CleanupOnCancel": true,
+  "WriteToLog": false,
+  "Parameters": {
+    "int": 10,
+    "double": 20.5,
+    "string": "twenty"
+  }
+}
