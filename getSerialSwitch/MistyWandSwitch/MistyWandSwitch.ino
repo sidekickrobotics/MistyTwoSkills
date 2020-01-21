@@ -32,14 +32,15 @@ void loop() {
     // print "Pressed" message to Misty
     Serial.println("Pressed");
     // Add delay to keep the LED on for min time
-    delay(500);
+    delay(1000);
   } else {
     // turn LED off:
     digitalWrite(LED_BUILTIN, LOW);
+    Serial.println("Not Pressed");
   }
 
   // Test Code that writes out Misty message every 1 second - Heartbeat
-  //delay(1000);                       // wait for a second
+  delay(500);                       // wait for a second
   //Serial.println("Misty Message - beat"); // Send message to Misty
   
 }
