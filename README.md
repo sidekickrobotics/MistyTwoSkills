@@ -15,6 +15,8 @@ Note: These Misty Skills are ALL experimental and in development. My Misty II is
 
 **getHousePowerUse** - Misty connects to power meter and displays present power usage level
 
+**getSerialSwitch** - Read and Arduino Switch "Pressed" through Arduino backpack 
+
 **getWeather** - updated External Request to use weatherstack instead of APIXU
 
 **myMistyDance** - Holding program for different dance moves
