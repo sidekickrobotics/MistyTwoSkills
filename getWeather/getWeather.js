@@ -1,6 +1,6 @@
 // Sends a message to debug listeners
 misty.Debug("The Weather skill is starting! - External Request")
-
+misty.SetDefaultVolume(20);
 
 misty.SendExternalRequest(
     "GET",
@@ -17,5 +17,8 @@ function _SendExternalRequest(data) {
     _name = _data.location.name
 
     misty.Debug("Misty here! Just letting you know it's " + _temperature + " and " + _weather_descriptions + " in " + _name);
+   
+    //Misty Speaks!!!
+    misty.Speak("Misty here! Just letting you know it is " + _temperature + " and " + _weather_descriptions + " in " + _name);
 
 }
