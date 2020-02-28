@@ -1,0 +1,19 @@
+{
+  "Name": "getSwitchAndDistance",
+  "UniqueId": "3b88f1bc-258c-4871-b56b-78c8fff1c967",
+  "Description": "My skill is amazing!",
+  "StartupRules": [
+    "Manual",
+    "Robot"
+  ],
+  "Language": "javascript",
+  "BroadcastMode": "verbose",
+  "TimeoutInSeconds": 600,
+  "CleanupOnCancel": true,
+  "WriteToLog": false,
+  "Parameters": {
+    "int": 10,
+    "double": 20.5,
+    "string": "twenty"
+  }
+}
